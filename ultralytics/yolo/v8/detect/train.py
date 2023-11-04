@@ -197,8 +197,8 @@ class Loss:
 
 @hydra.main(version_base=None, config_path=str(DEFAULT_CONFIG.parent), config_name=DEFAULT_CONFIG.name)
 def train(cfg):
-    cfg.model = cfg.model or "yolov8n.yaml"
-    cfg.data = cfg.data or "coco128.yaml"  # or yolo.ClassificationDataset("mnist")
+    cfg.model = cfg.model or "yolov8m.yaml"
+    cfg.data = cfg.data or "deeptraffic_mini.yaml"  # or yolo.ClassificationDataset("coco128")
     # trainer = DetectionTrainer(cfg)
     # trainer.train()
     from ultralytics import YOLO
